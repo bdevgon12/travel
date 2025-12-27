@@ -6,6 +6,7 @@ summary: "A two-day coastal route with markets, sunsets, and quiet beaches."
 tags: ["coast", "weekend", "beaches"]
 categories: ["Itineraries"]
 location: "Kochi, India"
+country: "India"
 cover: "/images/placeholder-2.svg"
 ---
 

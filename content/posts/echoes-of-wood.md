@@ -4,6 +4,7 @@ date: 2024-08-18T09:00:00+05:30
 draft: false
 summary: A sunrise walk along the lake, temples, and pastel walls.
 location: Udaipur, India
+country: India
 tags:
   - india
   - city-walks

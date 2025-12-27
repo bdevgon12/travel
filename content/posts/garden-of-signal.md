@@ -6,6 +6,7 @@ summary: "Desert forts, blue lanes, and a guide to the city after dark."
 tags: ["desert", "heritage", "night"]
 categories: ["Journeys"]
 location: "Jodhpur, India"
+country: "India"
 cover: "/images/placeholder-4.svg"
 ---
 

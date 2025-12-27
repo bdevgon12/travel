@@ -72,5 +72,7 @@
     <lastmod>2024-07-12T09:00:00+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/map/</loc>
   </url>
 </urlset>

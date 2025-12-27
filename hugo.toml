@@ -40,6 +40,10 @@ enableRobotsTXT = true
     url = "/posts/"
     weight = 2
   [[menu.main]]
+    name = "Map"
+    url = "/map/"
+    weight = 3
+  [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 3
+    weight = 4

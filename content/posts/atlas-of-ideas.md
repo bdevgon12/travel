@@ -6,6 +6,7 @@ summary: "Ridge trails, tea gardens, and the best viewpoints for morning light."
 tags: ["mountains", "hikes", "tea"]
 categories: ["Guides"]
 location: "Munnar, India"
+country: "India"
 cover: "/images/placeholder-3.svg"
 ---
 
