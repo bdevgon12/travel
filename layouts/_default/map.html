@@ -1,0 +1,55 @@
+{{ define "main" }}
+<section class="page-header travel-header">
+  <div>
+    <p class="eyebrow">Explore</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.summary }}<p class="lead">{{ . }}</p>{{ end }}
+  </div>
+  <div class="header-meta">
+    <div>
+      <span class="stat-number">{{ len (where .Site.RegularPages "Section" "posts") }}</span>
+      <span class="stat-label">Stories</span>
+    </div>
+    <div>
+      <span class="stat-number">{{ len .Site.Taxonomies.tags }}</span>
+      <span class="stat-label">Tags</span>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="map-shell">
+    <div class="map-wrap">
+      <div class="map-tooltip" id="map-tooltip">Country</div>
+      <svg class="world-map" id="world-map" viewBox="0 0 1000 500" role="img" aria-label="Interactive world map"></svg>
+      <p class="map-note">A stylized atlas view. Hover to preview, click to filter itineraries.</p>
+    </div>
+    <div class="map-details" id="map-details">
+      <div class="map-empty">
+        <h3>Select a country</h3>
+        <p>Click a country to load itineraries from the journal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ $mapPosts := slice }}
+{{ range $posts }}
+  {{ $country := .Params.country | default "" }}
+  {{ if not $country }}
+    {{ $loc := .Params.location | default "" }}
+    {{ if $loc }}
+      {{ $parts := split $loc ", " }}
+      {{ $country = index $parts (sub (len $parts) 1) }}
+    {{ end }}
+  {{ end }}
+  {{ if $country }}
+    {{ $mapPosts = $mapPosts | append (dict "title" .Title "url" .RelPermalink "summary" .Summary "cover" .Params.cover "date" (.Date.Format "Jan 2, 2006") "country" $country "country_key" (lower $country) "location" (.Params.location | default "") ) }}
+  {{ end }}
+{{ end }}
+<script>
+  window.__mapPosts = {{ $mapPosts | jsonify | safeJS }};
+</script>
+<script src="/js/map.js" defer></script>
+{{ end }}
