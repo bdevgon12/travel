@@ -1,0 +1,80 @@
+{{ define "main" }}
+<section class="hero">
+  <div>
+    <p class="eyebrow">Travel journal</p>
+    <h1>{{ .Site.Title }}</h1>
+    <p class="lead">{{ .Site.Params.description }}</p>
+    <div class="hero-actions">
+      <a class="btn" href="/posts/">Explore routes</a>
+      <a class="btn ghost" href="/about/">Our travel story</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <span class="stat-number">24</span>
+        <span class="stat-label">Cities</span>
+      </div>
+      <div>
+        <span class="stat-number">8</span>
+        <span class="stat-label">Itineraries</span>
+      </div>
+      <div>
+        <span class="stat-number">45</span>
+        <span class="stat-label">Photo spots</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-panel">
+    <p class="panel-title">Featured journey</p>
+    {{ range first 1 (where .Site.RegularPages "Section" "posts") }}
+      <a class="panel-feature" href="{{ .RelPermalink }}">
+        <img src="{{ .Params.cover }}" alt="{{ .Title }} cover" />
+        <div>
+          <p class="panel-meta">{{ .Date.Format "Jan 2, 2006" }} · {{ .Params.location }}</p>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Summary }}</p>
+        </div>
+      </a>
+    {{ end }}
+  </div>
+</section>
+<section class="section reveal">
+  <div class="section-heading">
+    <h2>Latest journeys</h2>
+    <a href="/posts/">View all</a>
+  </div>
+  <div class="card-grid">
+    {{ range first 3 (where .Site.RegularPages "Section" "posts") }}
+      {{ partial "post-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="section-heading">
+    <h2>Destinations & themes</h2>
+    <a href="/categories/">Browse categories</a>
+  </div>
+  <div class="chip-grid">
+    {{ range $cat, $list := .Site.Taxonomies.categories }}
+      <a class="chip-card" href="/categories/{{ $cat | urlize }}/">
+        <span class="chip-title">{{ $cat }}</span>
+        <span class="chip-meta">{{ len $list }} stories</span>
+      </a>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="split">
+    <div>
+      <h2>Tags & pathways</h2>
+      <p>Navigate by coastlines, mountains, food trails, and hidden lanes.</p>
+    </div>
+    <div class="tag-cloud">
+      {{ range $tag, $list := .Site.Taxonomies.tags }}
+        <a href="/tags/{{ $tag | urlize }}/">{{ $tag }}</a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

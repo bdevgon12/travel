@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ritual on Wander &amp; Tide</title>
+    <link>http://localhost:1313/tags/ritual/</link>
+    <description>Recent content in Ritual on Wander &amp; Tide</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Aug 2024 09:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ritual/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Soft Light Mornings</title>
+      <link>http://localhost:1313/posts/soft-light-mornings/</link>
+      <pubDate>Sat, 10 Aug 2024 09:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/soft-light-mornings/</guid>
+      <description>A short ritual for gentler starts and deeper focus.</description>
+    </item>
+    <item>
+      <title>Garden of Signal</title>
+      <link>http://localhost:1313/posts/garden-of-signal/</link>
+      <pubDate>Fri, 12 Jul 2024 09:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/garden-of-signal/</guid>
+      <description>Cultivating signal over noise through small, deliberate systems.</description>
+    </item>
+  </channel>
+</rss>

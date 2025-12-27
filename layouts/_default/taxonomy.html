@@ -1,0 +1,27 @@
+{{ define "main" }}
+<section class="page-header travel-header">
+  <div>
+    <p class="eyebrow">{{ .Data.Singular | title }}</p>
+    <h1>{{ .Title }}</h1>
+    <p class="lead">A collection of stories tied to this theme.</p>
+  </div>
+  <div class="header-meta">
+    <div>
+      <span class="stat-number">{{ len .Pages }}</span>
+      <span class="stat-label">Stories</span>
+    </div>
+    <div>
+      <span class="stat-number">{{ len .Site.Taxonomies.tags }}</span>
+      <span class="stat-label">Tags</span>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="card-grid">
+    {{ range .Pages }}
+      {{ partial "post-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+{{ end }}

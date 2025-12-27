@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Your next itinerary</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Your next itinerary</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Aug 2024 09:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Echoes of Wood</title>
+      <link>http://localhost:1313/posts/echoes-of-wood/</link>
+      <pubDate>Sun, 18 Aug 2024 09:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/echoes-of-wood/</guid>
+      <description>A sunrise walk along the lake, temples, and pastel walls.</description>
+    </item>
+    <item>
+      <title>Soft Light Mornings</title>
+      <link>http://localhost:1313/posts/soft-light-mornings/</link>
+      <pubDate>Sat, 10 Aug 2024 09:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/soft-light-mornings/</guid>
+      <description>A two-day coastal route with markets, sunsets, and quiet beaches.</description>
+    </item>
+    <item>
+      <title>Atlas of Ideas</title>
+      <link>http://localhost:1313/posts/atlas-of-ideas/</link>
+      <pubDate>Sun, 28 Jul 2024 09:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/atlas-of-ideas/</guid>
+      <description>Ridge trails, tea gardens, and the best viewpoints for morning light.</description>
+    </item>
+    <item>
+      <title>Garden of Signal</title>
+      <link>http://localhost:1313/posts/garden-of-signal/</link>
+      <pubDate>Fri, 12 Jul 2024 09:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/garden-of-signal/</guid>
+      <description>Desert forts, blue lanes, and a guide to the city after dark.</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>A travel studio collecting routes, rituals, and real-world tips.</description>
+    </item>
+  </channel>
+</rss>

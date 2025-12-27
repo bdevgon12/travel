@@ -1,0 +1,44 @@
+{{ define "main" }}
+<article class="article">
+  <header class="article-header">
+    <p class="eyebrow">{{ with .Params.categories }}{{ index . 0 }}{{ else }}Journal{{ end }}</p>
+    <h1>{{ .Title }}</h1>
+    <div class="meta">
+      <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+      {{ with .Params.location }}<span>• {{ . }}</span>{{ end }}
+      <span>• {{ .Site.Params.author }}</span>
+    </div>
+    <div class="tag-list">
+      {{ range .Params.tags }}
+        <a href="/tags/{{ . | urlize }}/">#{{ . }}</a>
+      {{ end }}
+    </div>
+  </header>
+  {{ with .Params.cover }}
+  <div class="article-cover">
+    <img src="{{ . }}" alt="{{ $.Title }} cover" />
+  </div>
+  {{ end }}
+  <div class="article-body">
+    {{ .Content }}
+  </div>
+</article>
+
+{{ if eq .Section "posts" }}
+  <section class="section reveal">
+    <div class="section-heading">
+      <h2>Related reads</h2>
+    </div>
+    <div class="card-grid">
+      {{ $related := .Site.RegularPages.Related . | first 3 }}
+      {{ if $related }}
+        {{ range $related }}
+          {{ partial "post-card.html" . }}
+        {{ end }}
+      {{ else }}
+        <p class="empty-state">No related posts yet. Check back soon.</p>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
+{{ end }}

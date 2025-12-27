@@ -1,0 +1,47 @@
+{{ define "main" }}
+<section class="page-header travel-header">
+  <div>
+    <p class="eyebrow">{{ .Section | default "Collection" | title }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.summary }}<p class="lead">{{ . }}</p>{{ end }}
+  </div>
+  <div class="header-meta">
+    <div>
+      <span class="stat-number">{{ len .Pages }}</span>
+      <span class="stat-label">Stories</span>
+    </div>
+    <div>
+      <span class="stat-number">{{ len .Site.Taxonomies.tags }}</span>
+      <span class="stat-label">Tags</span>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="layout-with-aside">
+    <div class="card-grid">
+      {{ range .Pages }}
+        {{ partial "post-card.html" . }}
+      {{ end }}
+    </div>
+    <aside class="sidebar">
+      <div class="sidebar-block">
+        <h3>Tags</h3>
+        <div class="tag-list">
+          {{ range $tag, $list := .Site.Taxonomies.tags }}
+            <a href="/tags/{{ $tag | urlize }}/">#{{ $tag }}</a>
+          {{ end }}
+        </div>
+      </div>
+      <div class="sidebar-block">
+        <h3>Categories</h3>
+        <div class="tag-list">
+          {{ range $cat, $list := .Site.Taxonomies.categories }}
+            <a href="/categories/{{ $cat | urlize }}/">{{ $cat }}</a>
+          {{ end }}
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+{{ end }}

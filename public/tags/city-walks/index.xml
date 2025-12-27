@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>City-Walks on Your next itinerary</title>
+    <link>http://localhost:1313/tags/city-walks/</link>
+    <description>Recent content in City-Walks on Your next itinerary</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Aug 2024 09:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/city-walks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Echoes of Wood</title>
+      <link>http://localhost:1313/posts/echoes-of-wood/</link>
+      <pubDate>Sun, 18 Aug 2024 09:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/echoes-of-wood/</guid>
+      <description>A sunrise walk along the lake, temples, and pastel walls.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,18 @@
+<article class="post-card">
+  <a class="card-image" href="{{ .RelPermalink }}">
+    <img src="{{ .Params.cover }}" alt="{{ .Title }} cover" loading="lazy" />
+  </a>
+  <div class="card-content">
+    <div class="meta">
+      <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+      {{ with .Params.location }}<span>• {{ . }}</span>{{ end }}
+    </div>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p>{{ .Summary }}</p>
+    <div class="tag-list">
+      {{ range first 2 .Params.tags }}
+        <a href="/tags/{{ . | urlize }}/">#{{ . }}</a>
+      {{ end }}
+    </div>
+  </div>
+</article>

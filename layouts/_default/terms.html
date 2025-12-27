@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="page-header travel-header">
+  <div>
+    <p class="eyebrow">Browse</p>
+    <h1>{{ .Title }}</h1>
+    <p class="lead">Explore the archive by theme.</p>
+  </div>
+  <div class="header-meta">
+    <div>
+      <span class="stat-number">{{ len .Data.Terms }}</span>
+      <span class="stat-label">Themes</span>
+    </div>
+    <div>
+      <span class="stat-number">{{ len .Site.RegularPages }}</span>
+      <span class="stat-label">Stories</span>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="term-grid">
+    {{ range .Data.Terms }}
+      <a class="term-card" href="{{ .Page.RelPermalink }}">
+        <h3>{{ .Page.Title }}</h3>
+        <p>{{ .Count }} stories</p>
+      </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

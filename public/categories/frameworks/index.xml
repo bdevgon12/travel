@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Frameworks on Wander &amp; Tide</title>
+    <link>http://localhost:1313/categories/frameworks/</link>
+    <description>Recent content in Frameworks on Wander &amp; Tide</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 28 Jul 2024 09:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/frameworks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Atlas of Ideas</title>
+      <link>http://localhost:1313/posts/atlas-of-ideas/</link>
+      <pubDate>Sun, 28 Jul 2024 09:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/atlas-of-ideas/</guid>
+      <description>Mapping connections between projects, people, and the spaces in between.</description>
+    </item>
+  </channel>
+</rss>

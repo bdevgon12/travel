@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Craft on Wander &amp; Tide</title>
+    <link>http://localhost:1313/tags/craft/</link>
+    <description>Recent content in Craft on Wander &amp; Tide</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 18 Aug 2024 09:00:00 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/craft/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Echoes of Wood</title>
+      <link>http://localhost:1313/posts/echoes-of-wood/</link>
+      <pubDate>Sun, 18 Aug 2024 09:00:00 +0530</pubDate>
+      <guid>http://localhost:1313/posts/echoes-of-wood/</guid>
+      <description>On the quiet intelligence of timber, and the way grain remembers the hand.</description>
+    </item>
+  </channel>
+</rss>
